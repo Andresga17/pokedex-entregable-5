@@ -1,0 +1,111 @@
+.pokedex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 2em;
+    row-gap: 4em;
+    width: 100%;
+}
+
+.poke-card {
+    /*tamaño a la card*/
+    width: 100%;
+    max-width: 330px;
+/* ------------------------ */
+    border-radius: 0.7em;
+    border: 0.6em solid;
+    border-color: #E35825;
+}
+
+.poke-card__header {/*padre de la imagen*/
+    background-color: gray;
+    height: 120px;
+    position: relative;
+}
+
+.poke-card__img {/*imagen*/
+    width: 50%;
+    position: absolute;
+    top: 10%;
+    /*centra la imagen*/
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.poke-card__body { /*baja el texto*/
+    padding-top: 2.5em;
+}
+
+.poke-card__name {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.7rem;
+}
+
+.poke-card__types-container {
+    display: flex;
+    gap: 1em;
+    justify-content: center;   
+}
+
+
+.poke-card__type {
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+.poke-card__footer {
+    padding: 1em 0.8em 2em; /*Arriba-abajo  izquier-derecha*/
+}
+
+.poke-card__stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*se forman tres columnas que miden 1fr*/
+    /* justify-content: center; */
+    gap: 25px 5px;
+}
+
+.poke-card__stat {/*para ponerlos verticalmente*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.poke-card__stat-label {
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 0.6;
+    font-family: 200;
+    font-size: 0.8rem;
+}
+
+.bg-grass {
+    background-image: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);
+}
+
+.bg-fire {
+    background-image: linear-gradient(176.37deg, #F96D6F -32.26%, #E35825 22.55%, #E8AE1B 125.72%);
+}
+.bg-normal {
+    background-image: linear-gradient(176.37deg, #ffffff -32.26%, #cacaca 22.55%, #a8a8a8 125.72%);
+}
+.bg-pshyquic {
+    background-image: linear-gradient(177.03deg, #f46f9b -11.97%, #f88baf 71.28%, #f4b0c6 135.64%);
+}
+.bg-volador {
+    background-image: linear-gradient(165.03deg, #386dd8 0.83%, #618ce3 71.28%, #a3b4d6 135.64%);
+}
+
+/*COSAS QUE FALTAN
+*Crear el repositorio git y hacer un commit desde aqui
+*Corregir la imagen del header ---- listo
+*Darle estilos al home
+*Hacer el Header
+*Hacer la transicion de imagenes
+*Hacer el pokeinfo
+*Hacer la paginacion
+*Hacer un JSON con los colores para todos los tipos ---listo
+*/
+
