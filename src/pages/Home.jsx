@@ -16,14 +16,22 @@ const Home = () => {
   }
 
   return (
-    <div>
-        <h1>Pokedex</h1>
-        <h2>Hi Trainer</h2>
-        <p>Give me your name to start</p>
-        <form onSubmit={handleSubmit}>
-            <input id='name' type="text" />
-            <button>Start</button>
+    <div className='home'>
+      <section className='home__container-info'>
+        <img className='home__image-title' src="../../public/images/pokedex-img.svg" alt="" />
+        <h2 className='homer__greeting'>Hi Trainer!</h2>
+        <form className='home__form' onSubmit={handleSubmit}>
+            <input className='home__input' placeholder='give me your name to start' id='name' type="text" />
+            <button className='home__button'>Start</button>
         </form>
+      </section>  
+          <div className='home__footer-circle'>
+            <div className='home__footer-inner-circle'></div>
+          </div>
+        <footer className='home__footer'>
+          <div className='home__footer-block-red'></div>
+          <div className='home__footer-block-black'></div>
+        </footer>
     </div>
   )
 }
