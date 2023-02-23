@@ -1,5 +1,6 @@
 .App {
     height: 100vh;
+    /* background-image: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%); */
 }
 
 /**********Styles pokecard**********/
@@ -12,8 +13,9 @@
     column-gap: 2em;
     row-gap: 4em;
     width: 100%;
+    background-image: linear-gradient(178.92deg, #CAE099 0.92%, #ABDAC6 47.96%, #7EC6C5 99.08%);
 }
-
+/*#7EC6C5*/
 .poke-card {
     /*tamaño a la card*/
     width: 100%;
@@ -21,6 +23,14 @@
 /* ------------------------ */
     border-radius: 0.7em;
     border: 0.6em solid;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.4s ease;    
+}
+
+.poke-card:hover {
+    transform: rotate(3deg);
+    opacity: 0.8;
 }
 
 .poke-card__header {/*padre de la imagen*/
@@ -67,7 +77,6 @@
 .poke-card__stats-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /*se forman tres columnas que miden 1fr*/
-    /* justify-content: center; */
     gap: 25px 5px;
 }
 
@@ -92,6 +101,7 @@
     position: relative;
     align-items: center;
     height: 100%;
+    background-color: rgb(210, 202, 193);
 }
 
 .home__container-info {
@@ -178,14 +188,44 @@
     background-color: black;
 }
 
+/*pokedex titulo e input*/
+
+.pokedex-title {
+    text-align: center;
+    font-weight: 400;
+    margin: 1em;
+}
+
+.pokedex-title__label {
+    display: block;
+}
+
+.pokedex-form{
+}
+
+.pokedex-form__input{
+}
+
+.pokedex-form__button{}
+
+/*Pagination*/
+.pagination__container {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+/*PokeInfo*/
+
+
 
 /*COSAS QUE FALTAN
 *Crear el repositorio git y hacer un commit desde aqui --- listo
 *Corregir la imagen del header ---- listo
-*Darle estilos al home
-*Hacer el Header
-*Hacer la transicion de imagenes
+*Darle estilos al home ---- listo
+*Hacer el Header ---- listo
+*Hacer la transicion de imagenes ---- listo
 *Hacer el pokeinfo
-*Hacer la paginacion
+*Hacer la paginacion ---- listo
 *Hacer un JSON con los colores para todos los tipos --- listo
 */

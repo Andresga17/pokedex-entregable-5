@@ -1,0 +1,28 @@
+
+
+/* .pagination {
+    margin: auto;
+} */
+
+.pagination__list {
+    display: flex;
+    gap: 10px;
+}
+
+.pagination__number {
+    width: 40px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.page__active {
+    background-color: aqua;
+    font-size: xx-large;
+    cursor: pointer;
+}
+

@@ -1,0 +1,27 @@
+.conteiner-component {
+    background-image: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);
+    /* background-image: linear-gradient(165.03deg, #386dd8 0.83%, #618ce3 71.28%, #a3b4d6 135.64%); */
+}
+
+.header-container-img {
+    background-image: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);
+    display: flex;
+    width: 85%;
+    height: 400px;
+    margin: auto;
+}
+
+.header-container-img img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: 0.5s ease;
+}
+
+.header-container-img img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}

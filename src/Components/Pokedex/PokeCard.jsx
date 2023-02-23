@@ -30,12 +30,13 @@ const PokeCard = ({pokemon}) => {
   }
 
   return (
-    <article onClick={handleClick} className='poke-card' style={{borderColor: borderColor}}>
+    <>
+    <div onClick={handleClick} className='poke-card' style={{borderColor: borderColor}}>
       <header className='poke-card__header' style={{backgroundImage: backGroundStyles}}>
         <img className='poke-card__img' src={poke?.sprites.other['official-artwork'].front_default} alt="" />
       </header>
       <section className=''></section>
-      <body className='poke-card__body'>
+      <section className='poke-card__body'>
         <h2 className='poke-card__name' style={{color: borderColor}}>{poke?.name}</h2>
         <ul className='poke-card__types-container'>
           {
@@ -44,7 +45,7 @@ const PokeCard = ({pokemon}) => {
             ))
           }
         </ul>
-      </body>
+      </section>
       <footer className='poke-card__footer'>
         <ul className='poke-card__stats-container'>
           {
@@ -57,7 +58,8 @@ const PokeCard = ({pokemon}) => {
           }
         </ul>
       </footer>  
-    </article>
+    </div>
+    </>
   )
 }
 

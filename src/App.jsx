@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import './App.css'
@@ -9,11 +8,7 @@ import ProtectedRoutes from './pages/ProtectedRoutes';
 
 function App() {
   
-  //el state es el reducer
-  const { nameTrainer } = useSelector(state => state)
   
-  
-
   return (
     <div className="App">
       <Routes>

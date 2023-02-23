@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import Header from '../Components/Pokedex/Header'
 
 const PokeInfo = () => {
 
@@ -22,19 +23,32 @@ const PokeInfo = () => {
      }) 
   }, [id])
 
+  console.log(poke)
+
   if(hasError) {
     return <h1>❌The pokemon with name "{id} not found"❌</h1>
   }else{
     return (
       <div>
-        <img src={poke?.sprites.other['official-artwork'].front_default} alt="" />
-        <h1>{poke?.name}</h1>
+        <header>
+          <img src="../../public/images/pokedex-img.svg" alt="" />
+        </header>
+        <section>
+          <img src={poke?.sprites.other['official-artwork'].front_default} alt="" />
+          <div>#{id}</div>
+          <h1>{poke?.name}</h1>
+          <ul>
+            <li>Weight<span>{poke?.weight}</span></li>
+            <li>Height<span>{poke?.height}</span></li>
+          </ul>
+        </section>
       </div>
     )
   }
-
+  
   return (
     <div>
+        
         <img src={poke?.sprites.other['official-artwork'].front_default} alt="" />
         <h1>{poke?.name}</h1>
     </div>
