@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <div className='home'>
       <section className='home__container-info'>
-        <img className='home__image-title' src="../../public/images/pokedex-img.svg" alt="" />
+        <img className='home__image-title' src="/images/pokedex.img.svg" alt="" />
         <h2 className='homer__greeting'>Hi Trainer!</h2>
         <form className='home__form' onSubmit={handleSubmit}>
             <input className='home__input' placeholder='give me your name to start' id='name' type="text" />
