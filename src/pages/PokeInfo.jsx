@@ -46,7 +46,7 @@ const PokeInfo = () => {
 
         <section className='poke-info__header-section'>
           <div className='poke-info__block-red'>
-            <img className='poke-info__image-header' src="/images/pokedex-img.svg" alt="" />
+            <img className='poke-info__image-header' src="/images/pokedex-img-home.png" alt="" />
           </div>
           <div className='poke-info__block-black'></div>
         </section>
