@@ -18,7 +18,7 @@ const SelectTypes = ({ setSelectValue, setPage }) => {
   }
   
   return (
-    <select onChange={handleChange}>
+    <select className='select-type__select' onChange={handleChange}>
         <option value="allpokemons">All Pokemons</option>
         {
           types?.results.map(type => (

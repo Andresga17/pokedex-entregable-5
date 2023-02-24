@@ -190,32 +190,299 @@
 
 /*pokedex titulo e input*/
 
-.pokedex-title {
+.pokedex-greeting {
+    font-size: 30px;
     text-align: center;
     font-weight: 400;
-    margin: 1em;
+    margin-top: 120px;
+    
 }
 
-.pokedex-title__label {
-    display: block;
+.pokedex-greeting__label {
+   display: inline;
+   color: #d93f3f;
 }
 
-.pokedex-form{
+.pokedex-form__container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.pokedex-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pokedex-form__input{
+    padding: 0.4rem;
+    width: 200px;
+    height: 5vh;
+    border-radius: 5px 0 0 5px;
 }
 
-.pokedex-form__button{}
+.pokedex-form__button{
+    background-color: #d93f3f;
+    color: white;
+    width: 100px;
+    height: 5vh;
+    border-radius: 0 5px 5px 0;
+}
+
+.select-type__select {
+    height: 5vh;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+}
 
 /*Pagination*/
 .pagination__container {
     display: flex;
     justify-content: center;
-    align-items: end;
+    background-image: linear-gradient(178.92deg, #7EC6C5 0.92%,  #CAE099 47.96%,  #ABDAC6.08%);
+    padding: 2.5rem;
 }
 
 /*PokeInfo*/
+
+.poke-info__card { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.3rem;
+    margin: 6.5em;
+    box-sizing: 1px 1px 5px #000;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    margin-top: 10rem;
+    border: solid #ced4d2;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    width: 100%;
+}
+
+
+.poke-info__header-section {
+    position: absolute;
+    display: block;
+    top: 0;
+    height: 85px;
+    width: 100%;
+}
+
+.poke-info-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    height: 70px;
+    background-color: white;
+    border: solid 10px black;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    right: 100px;
+}
+
+.poke-info-inner-circle {
+    background-color: black;
+    width: 55%;
+    height: 55%;
+    border-radius: 50%;
+    aspect-ratio: 1;
+}
+
+.poke-info__block-red {
+    height: 60%;
+    background-color: #ed1b1b;
+}
+
+.poke-info__block-black{
+    height: 40%;
+    background-color: black;
+}
+
+.poke-info__image-header {
+    width: 100%;
+    max-width: 280px;
+    position: absolute;
+    top: 7px;
+    left: 70px;
+}
+
+.poke-info__image-container {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+    margin-right: 45px;
+    max-width: 800px;
+    border-radius: 10px 10px 0 0;
+}
+
+.poke-info__image {
+    position: absolute;
+    height: 315px;
+    width: 340px;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.poke-info__id {
+    border: solid 0.5px rgb(165, 159, 159);
+    font-weight: 600;
+}
+
+.poke-info__name {
+    margin-top: 0;
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+.poke-info__phy-params {
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap: 3em;
+    margin-top: 0.3rem;  
+    text-align: center;
+    width: 100%;
+}
+
+.poke-info__param-label {
+    margin: 0.3rem;
+}
+
+.poke-info__param-value{
+    display: block;
+    margin: 0.3rem;
+}
+
+.poke-info__types-abilities{
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap: 1rem;
+    text-align: center;
+}
+
+.poke-info__type-title {
+    display: block;
+}
+
+.poke-info__abilities-title {
+    display: block;
+}
+
+.poke-info__type-list {   
+    width: 100%;
+    max-width: 330px;
+    display: flex;
+    gap: 1em;
+    padding: 3rem;
+}
+
+.poke-info__type-element {
+    color: white;
+    border-radius: 2px;
+    width: 207px;
+    text-align: center;
+}
+
+.poke-info__abilities-list {
+    width: 100%;
+    max-width: 330px;
+    display: flex;
+    gap: 1em;
+    padding: 3rem;
+}
+
+.poke-info__abilities-element {
+    border: 1px #cccccc solid;
+    border-radius: 2px;
+    width: 207px;
+    text-align: center;
+    display: inline;
+}
+
+.poke-info__stats-container {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    max-width:min-content;
+    
+}
+
+.content-stat {
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.bar-stat {
+    height: 20px;
+    width: 400px;
+    background: rgba(225,225,225,0.5);
+    border-radius: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.bar-progress {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.poke-info__container {
+    margin: 6.5em;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border: solid #ced4d2;
+    width: 100%;
+    max-width: 700px;
+    box-sizing: 1px 1px 5px #000;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.poke-info__movements-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 30px;
+}
+
+.poke-info__movements-element {
+    background-color: #f0e8e8;
+    border-radius: 25px;
+    padding: 0.7rem;
+    transition: transform 200ms ease;
+    cursor: pointer;
+    transform: ease 300ms;
+}
+
+.poke-info__movements-element:hover {
+    transform: scale(1.1);
+    transition: ease 300ms;
+}
+
+
+
+
 
 
 
@@ -225,7 +492,7 @@
 *Darle estilos al home ---- listo
 *Hacer el Header ---- listo
 *Hacer la transicion de imagenes ---- listo
-*Hacer el pokeinfo
+*Hacer el pokeinfo ---- listo
 *Hacer la paginacion ---- listo
 *Hacer un JSON con los colores para todos los tipos --- listo
 */

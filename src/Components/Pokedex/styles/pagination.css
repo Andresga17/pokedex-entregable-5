@@ -1,4 +1,6 @@
-
+:root {
+    --bar-progress: #3f3f;
+}
 
 /* .pagination {
     margin: auto;
@@ -20,9 +22,14 @@
     font-size: 2rem;
 }
 
+.pagination__number:hover {
+    
+}
+
 .page__active {
-    background-color: aqua;
+    background-color: #d93f3f;
     font-size: xx-large;
     cursor: pointer;
+    border-radius: 6px;
 }
 
